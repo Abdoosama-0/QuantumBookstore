@@ -9,12 +9,13 @@ package com.mycompany.quantumbookstore;
  * @author abdo
  */
 public abstract class Book {
-    protected String isbn;
-    protected String title;
-    protected int year;
-    protected double price;
-    protected String author;
-
+    // Basic book information
+    private String isbn;
+    private String title;
+    private int year;
+    private double price;
+    private String author;
+    // Constructor to initialize book details
     public Book(String isbn, String title, int year, double price, String author) {
         this.isbn = isbn;
         this.title = title;
@@ -22,18 +23,19 @@ public abstract class Book {
         this.price = price;
         this.author = author;
     }
-
+    // Getters to access book data
     public String getIsbn() { return isbn; }
     public int getYear() { return year; }
     public double getPrice() { return price; }
     public String getTitle() { return title; }
     public String getAuthor() { return author; }
-
+    // Abstract method: subclasses decide if the book can be bought
     public abstract boolean isPurchasable();
+    // Abstract method: defines how the book is bought 
     public abstract double buy(int quantity, String email, String address);
-//    public  double buy(int quantity, String email);
 
 
+    // Print basic info about the book
     @Override
     public String toString() {
         return "Quantum book store - ISBN: " + isbn + ", Title: " + title + ", Author: " + author + ", Year: " + year + ", Price: " + price;

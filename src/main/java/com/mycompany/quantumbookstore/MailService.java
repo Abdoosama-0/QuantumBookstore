@@ -9,6 +9,7 @@ package com.mycompany.quantumbookstore;
  * @author abdo
  */
 public class MailService {
+    // Send aى eBook to the provided email
     public static void sendTo(String email) {
         System.out.println("Quantum book store - Sending eBook to " + email);
     }

@@ -9,6 +9,7 @@ package com.mycompany.quantumbookstore;
  * @author abdo
  */
 public class ShippingService {
+    // Sends a paper book to the given address
     public static void sendTo(String address) {
         System.out.println("Quantum book store - Shipping paper book to " + address);
     }

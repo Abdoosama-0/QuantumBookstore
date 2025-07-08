@@ -10,20 +10,22 @@ package com.mycompany.quantumbookstore;
  */
 public class PaperBook extends Book {
     private int stock;
-
+     // Constructor to initialize a paper book with available stock
     public PaperBook(String isbn, String title, int year, double price, String author, int stock) {
         super(isbn, title, year, price, author);
         this.stock = stock;
     }
+         // Returns how many copies are available
         public int getStock(){
                  return stock;
         }
+         // Paper book is only purchasable if there's stock
          @Override
-           public boolean isPurchasable() {
+         public boolean isPurchasable() {
         return stock > 0;
     }
 
-  
+     // Handles the process of buying a paper book
      @Override
     public double buy(int quantity, String email, String address) {
         if(stock <=0){
@@ -34,6 +36,6 @@ public class PaperBook extends Book {
         }
         stock -= quantity;
         ShippingService.sendTo(address);
-        return price * quantity;
+        return getPrice() * quantity;
     }
 }

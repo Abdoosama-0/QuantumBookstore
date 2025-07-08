@@ -18,14 +18,15 @@ import java.util.*;
  */
 
 public class BookStore {
+    // Inventory holds books using ISBN as a unique key 
     private Map<String, Book> inventory = new HashMap<>();//not arrayList because each book has a unique id =>isbn
-
+    // Add a new book to the inventory
     public void addBook(Book book) {
         inventory.put(book.getIsbn(), book);
         System.out.println("***add book***");
         System.out.println("Quantum book store - Book added: " + book.getTitle());
     }
-
+    // Remove books that are older than 'maxYears'
     public List<Book> removeOutdatedBooks(int maxYears) {
         System.out.println("***remove outdated books***");
         List<Book> removed = new ArrayList<>();
@@ -43,7 +44,7 @@ public class BookStore {
         }
         return removed;
     }
-
+    // Handles the buy of a book by its ISBN
     public double buyBook(String isbn, int quantity, String email, String address) {
         System.out.println("***buy book***");
         Book book = inventory.get(isbn);
