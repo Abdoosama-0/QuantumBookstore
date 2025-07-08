@@ -19,10 +19,10 @@ This project models an extensible bookstore system with the ability to:
 
 ---
 ## input example
-![input example](https://i.postimg.cc/Dy1VrKpf/Screenshot-2025-07-08-181552.png)
+![input example](https://i.postimg.cc/4djcLKZ7/Screenshot-2025-07-09-004815.png)
 
 ## output example
-![output example](https://i.postimg.cc/T1GVBgx4/Screenshot-2025-07-08-181820.png)
+![output example](https://i.postimg.cc/gJLXZYRY/Screenshot-2025-07-09-004835.png)
 ## 🛠️ Tech Stack
 
 - Language: Java 
